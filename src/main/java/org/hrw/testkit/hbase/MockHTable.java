@@ -15,23 +15,18 @@ import java.util.*;
 
 /**
  * MockHTable.
- * <p/>
  * original MockHTable (by agaoglu) : https://gist.github.com/agaoglu/613217#file_mock_h_table.java
- * <p/>
  * Modifications
- * <p/>
- * <ul>
- * <li>fix filter (by k-mack) : https://gist.github.com/k-mack/4600133</li>
- * <li>fix batch() : implement all mutate operation and fix result[] count.</li>
- * <li>fix exists()</li>
- * <li>fix increment() : wrong return value</li>
- * <li>check columnFamily</li>
- * <li>implement mutateRow()</li>
- * <li>implement getTableName()</li>
- * <li>implement getTableDescriptor()</li>
- * <li>throws RuntimeException when unimplemented method was called.</li>
- * <li>remove some methods for loading data, checking values ...</li>
- * </ul>
+ * fix filter (by k-mack) : https://gist.github.com/k-mack/4600133
+ *     fix batch() : implement all mutate operation and fix result[] count.
+ *     fix exists()
+ *     fix increment() : wrong return value
+ *     check col:umnFamily
+ * implement mutateRow()
+ * implement getTableName()
+ * implement getTableDescriptor()
+ * throws RuntimeException when unimplemented method was called.
+ * remove some methods for loading data, checking values ...
  */
 public class MockHTable implements HTableInterface {
     private final String tableName;
